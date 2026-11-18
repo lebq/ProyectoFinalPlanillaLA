@@ -6,7 +6,7 @@
 
         public decimal AsPercentage => Value * 100;
 
-        public InterestRate(decimal value)
+        private InterestRate(decimal value)
         {
             if (value < 1)
                 throw new ArgumentException("Interest rate must be greater than or equal to 1", nameof(value));
