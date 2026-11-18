@@ -1,0 +1,15 @@
+<Solution>
+  <Folder Name="/00. deploy/" />
+  <Folder Name="/01. Core/">
+    <Project Path="Galaxy.Bank.Application/Galaxy.Bank.Application.csproj" />
+    <Project Path="Galaxy.Bank.Domain/Galaxy.Bank.Domain.csproj" />
+  </Folder>
+  <Folder Name="/02. Adapters/" />
+  <Folder Name="/02. Adapters/Driven/">
+    <Project Path="Galaxu.Bank.Persistence/Galaxy.Bank.Persistence.csproj" />
+    <Project Path="Galaxy.Bank.Messages/Galaxy.Bank.Messaging.csproj" />
+  </Folder>
+  <Folder Name="/02. Adapters/Driving/">
+    <Project Path="Galaxy.Bank.API/Galaxy.Bank.API.csproj" />
+  </Folder>
+</Solution>
