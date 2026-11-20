@@ -5,6 +5,11 @@
         public string Currency { get; }
         public decimal Amount { get; }
 
+        private Money()
+        {
+            
+        }
+
         public Money(string currency, decimal amount)
         {
             if (string.IsNullOrWhiteSpace(currency))

@@ -5,6 +5,11 @@
         public string Type { get; }
         public string Number { get; }
 
+        private IdentityDocument()
+        {
+            
+        }
+
         private IdentityDocument(string type, string number)
         {
             if (string.IsNullOrWhiteSpace(type))
