@@ -2,7 +2,7 @@
 
 namespace Galaxy.Bank.Domain.Entities
 {
-    public sealed class Customer
+    public sealed class Customer : BaseEntity
     {
         public string Name { get; }
         public string LastName { get; }
@@ -10,6 +10,14 @@ namespace Galaxy.Bank.Domain.Entities
         public string Email { get; }
         public string Address { get; }
         public DateTime BornDate { get; }
+
+        private readonly List<Loan> _loans = new();
+        public IReadOnlyCollection<Loan> Loans => _loans.AsReadOnly();
+
+        private Customer()
+        {
+
+        }
 
         private Customer(string name, string lastName, IdentityDocument document, string email, string address, DateTime bornDate)
         {

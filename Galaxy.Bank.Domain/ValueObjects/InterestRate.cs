@@ -6,6 +6,11 @@
 
         public decimal AsPercentage => Value * 100;
 
+        private InterestRate()
+        {
+            
+        }
+
         private InterestRate(decimal value)
         {
             if (value < 1)

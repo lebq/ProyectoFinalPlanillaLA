@@ -2,7 +2,7 @@
 
 namespace Galaxy.Bank.Domain.Entities
 {
-    public sealed class CreditProduct
+    public sealed class CreditProduct : BaseEntity
     {
         public string Name { get; }
         public string Description { get; }
@@ -11,6 +11,14 @@ namespace Galaxy.Bank.Domain.Entities
         public Money MaximumAmount { get; }
         public Money MinimumAmount { get; }
         public InterestRate AnnualInterestRate { get; }
+
+        private readonly List<Loan> _loans = new();
+        public IReadOnlyCollection<Loan> Loans => _loans.AsReadOnly();
+
+        private CreditProduct()
+        {
+            
+        }
 
         private CreditProduct(string name, string description, int minimumTerm, int maximumTerm, Money maximumAmount, Money minimumAmount, InterestRate annualInterestRate)
         {
