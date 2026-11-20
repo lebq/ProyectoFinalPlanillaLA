@@ -2,10 +2,10 @@
 {
     public class BaseEntity
     {
-        public Guid Id { get;  }
+        public Guid Id { get; protected set; }
         public bool IsActive { get; protected set; }
-        public DateTime CreatedAt { get; }
-        public string CreatedBy { get; }
+        public DateTime CreatedAt { get; protected set; }
+        public string CreatedBy { get; protected set; }
         public DateTime UpdatedAt { get; protected set; }
         public string UpdatedBy { get; protected set; }
 

@@ -1,0 +1,19 @@
+services:
+  sqlserver_hexagonal:
+    image: mcr.microsoft.com/mssql/server:2019-latest
+    container_name: sqlserver_hexagonal
+    restart: always
+    environment:
+      MSSQL_SA_PASSWORD: Password2026
+      MSSQL_PID: Express
+      ACCEPT_EULA: Y
+    volumes:
+      - C:\Users\USUARIO\Documents\Docker\Volumenes\Hexagonal:/var/opt/mssql/data
+    ports:
+      - "1500:1433"
+    networks:
+      - hexagonal_network
+
+networks:
+  hexagonal_network:
+    driver: bridge

@@ -1,5 +1,7 @@
 <Solution>
-  <Folder Name="/00. deploy/" />
+  <Folder Name="/00. deploy/">
+    <File Path="docker-compose.yml" />
+  </Folder>
   <Folder Name="/01. Core/">
     <Project Path="Galaxy.Bank.Application/Galaxy.Bank.Application.csproj" />
     <Project Path="Galaxy.Bank.Domain/Galaxy.Bank.Domain.csproj" />
