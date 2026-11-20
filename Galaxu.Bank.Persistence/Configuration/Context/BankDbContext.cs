@@ -1,21 +1,14 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using Galaxy.Bank.Domain.Entities;
+using Microsoft.EntityFrameworkCore;
 
 namespace Galaxy.Bank.Persistence.Configuration.Context
 {
-    public class BankDbContext : DbContext
+    public class BankDbContext(DbContextOptions<BankDbContext> options) : DbContext(options)
     {
-        public BankDbContext()
-        {
-            
-        }
-        public BankDbContext(DbContextOptions<BankDbContext> options) : base(options)
-        {
-        }
-
-        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
-        {
-            optionsBuilder.UseSqlServer("server=localhost,1500; database=DbBank; uid=sa; password=Password2026; encrypt=false;");
-        }
+        public DbSet<Customer> customers { get; set; }
+        public DbSet<CreditProduct> creditProducts { get; set; }
+        public DbSet<Loan> loans { get; set; }
+        public DbSet<Payment> payments { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {

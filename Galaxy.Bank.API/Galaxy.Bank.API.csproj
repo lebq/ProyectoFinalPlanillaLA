@@ -12,6 +12,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\Galaxu.Bank.Persistence\Galaxy.Bank.Persistence.csproj" />
     <ProjectReference Include="..\Galaxy.Bank.Application\Galaxy.Bank.Application.csproj" />
   </ItemGroup>
 
